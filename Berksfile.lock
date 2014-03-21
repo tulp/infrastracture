@@ -1,0 +1,113 @@
+{
+  "sources": {
+    "base": {
+      "path": "./tulp_repo/cookbooks/base"
+    },
+    "postgresql": {
+      "path": "./tulp_repo/cookbooks/postgresql"
+    },
+    "redis": {
+      "path": "./tulp_repo/cookbooks/redis"
+    },
+    "s3backup": {
+      "path": "./tulp_repo/cookbooks/s3backup"
+    },
+    "user": {
+      "path": "./tulp_repo/cookbooks/user"
+    },
+    "tulp": {
+      "path": "./tulp_repo/cookbooks/tulp"
+    },
+    "zabbix": {
+      "path": "./tulp_repo/cookbooks/zabbix"
+    },
+    "crontab": {
+      "path": "./tulp_repo/cookbooks/crontab"
+    },
+    "apt": {
+      "locked_version": "2.3.8"
+    },
+    "nginx": {
+      "locked_version": "2.4.4"
+    },
+    "lvm": {
+      "locked_version": "1.0.4"
+    },
+    "java": {
+      "locked_version": "1.21.2"
+    },
+    "ntp": {
+      "locked_version": "1.6.0"
+    },
+    "iptables": {
+      "locked_version": "0.12.0"
+    },
+    "sysctl": {
+      "locked_version": "0.3.5"
+    },
+    "timezone": {
+      "locked_version": "0.0.1"
+    },
+    "postfix": {
+      "locked_version": "3.1.4"
+    },
+    "sphinx": {
+      "locked_version": "1.0.3"
+    },
+    "rvm": {
+      "locked_version": "0.9.1",
+      "git": "git://github.com/fnichol/chef-rvm.git",
+      "ref": "87f58d428c160337c1581ed1130a1a53d94e5126"
+    },
+    "emacs24": {
+      "locked_version": "0.1.0",
+      "git": "git@github.com:Sliim/emacs24-chef-cookbook.git",
+      "ref": "a43b7d338a8d06abd3e52889a0753548d80211f6"
+    },
+    "sudo": {
+      "locked_version": "2.5.2"
+    },
+    "bluepill": {
+      "locked_version": "2.3.1"
+    },
+    "rsyslog": {
+      "locked_version": "1.12.2"
+    },
+    "build-essential": {
+      "locked_version": "2.0.0"
+    },
+    "ohai": {
+      "locked_version": "1.1.12"
+    },
+    "runit": {
+      "locked_version": "1.5.10"
+    },
+    "yum": {
+      "locked_version": "3.1.4"
+    },
+    "yum-epel": {
+      "locked_version": "0.3.4"
+    },
+    "mysql": {
+      "locked_version": "4.1.2"
+    },
+    "openssl": {
+      "locked_version": "1.1.0"
+    },
+    "homebrew": {
+      "locked_version": "1.5.4"
+    },
+    "windows": {
+      "locked_version": "1.30.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.5"
+    },
+    "percona": {
+      "locked_version": "0.14.5"
+    },
+    "chef_gem": {
+      "locked_version": "0.1.0"
+    }
+  }
+}

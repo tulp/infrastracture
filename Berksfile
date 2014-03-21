@@ -1,0 +1,23 @@
+site :opscode
+
+cookbook 'base', path: 'tulp_repo/cookbooks/base'
+cookbook 'postgresql', path: 'tulp_repo/cookbooks/postgresql'
+cookbook 'redis', path: 'tulp_repo/cookbooks/redis'
+cookbook 's3backup', path: 'tulp_repo/cookbooks/s3backup'
+cookbook 'user', path: 'tulp_repo/cookbooks/user'
+cookbook 'tulp', path: 'tulp_repo/cookbooks/tulp'
+cookbook 'zabbix', path: 'tulp_repo/cookbooks/zabbix'
+cookbook 'crontab', path: 'tulp_repo/cookbooks/crontab'
+cookbook 'apt'
+cookbook 'nginx'
+cookbook 'lvm'
+cookbook 'java'
+cookbook 'ntp'
+cookbook 'iptables'
+cookbook 'sysctl'
+cookbook 'timezone'
+cookbook 'postfix'
+cookbook 'sphinx'
+cookbook 'rvm', github: 'fnichol/chef-rvm'
+cookbook 'emacs24', git: 'git@github.com:Sliim/emacs24-chef-cookbook.git' 
+
