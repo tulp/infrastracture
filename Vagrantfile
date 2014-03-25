@@ -9,7 +9,16 @@ Vagrant.require_plugin "vagrant-omnibus"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "debian-7"
 
+  config.vm.network "forwarded_port", guest: 80, host: 8888
+  config.vm.network "forwarded_port", guest: 3001, host: 8881
+  config.ssh.forward_agent = true
+
   config.omnibus.chef_version = :latest 
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--memory", 1024]
+    vb.customize ["modifyvm", :id, "--cpus", 1]
+  end
 
   config.vm.provision "chef_solo" do |chef| 
     chef.cookbooks_path = "vendor/cookbooks"
