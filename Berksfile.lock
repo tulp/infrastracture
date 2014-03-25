@@ -27,6 +27,9 @@
     "apt": {
       "locked_version": "2.3.8"
     },
+    "git": {
+      "locked_version": "4.0.0"
+    },
     "nginx": {
       "locked_version": "2.4.4"
     },
@@ -67,17 +70,17 @@
     "sudo": {
       "locked_version": "2.5.2"
     },
-    "bluepill": {
-      "locked_version": "2.3.1"
-    },
-    "rsyslog": {
-      "locked_version": "1.12.2"
+    "dmg": {
+      "locked_version": "2.2.0"
     },
     "build-essential": {
       "locked_version": "2.0.0"
     },
-    "ohai": {
-      "locked_version": "1.1.12"
+    "windows": {
+      "locked_version": "1.30.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.5"
     },
     "runit": {
       "locked_version": "1.5.10"
@@ -88,6 +91,15 @@
     "yum-epel": {
       "locked_version": "0.3.4"
     },
+    "bluepill": {
+      "locked_version": "2.3.1"
+    },
+    "rsyslog": {
+      "locked_version": "1.12.2"
+    },
+    "ohai": {
+      "locked_version": "1.1.12"
+    },
     "mysql": {
       "locked_version": "4.1.2"
     },
@@ -96,12 +108,6 @@
     },
     "homebrew": {
       "locked_version": "1.5.4"
-    },
-    "windows": {
-      "locked_version": "1.30.0"
-    },
-    "chef_handler": {
-      "locked_version": "1.1.5"
     },
     "percona": {
       "locked_version": "0.14.5"
