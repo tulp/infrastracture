@@ -1,119 +1,125 @@
-{
-  "sources": {
-    "base": {
-      "path": "./tulp_repo/cookbooks/base"
-    },
-    "postgresql": {
-      "path": "./tulp_repo/cookbooks/postgresql"
-    },
-    "redis": {
-      "path": "./tulp_repo/cookbooks/redis"
-    },
-    "s3backup": {
-      "path": "./tulp_repo/cookbooks/s3backup"
-    },
-    "user": {
-      "path": "./tulp_repo/cookbooks/user"
-    },
-    "tulp": {
-      "path": "./tulp_repo/cookbooks/tulp"
-    },
-    "zabbix": {
-      "path": "./tulp_repo/cookbooks/zabbix"
-    },
-    "crontab": {
-      "path": "./tulp_repo/cookbooks/crontab"
-    },
-    "apt": {
-      "locked_version": "2.3.8"
-    },
-    "git": {
-      "locked_version": "4.0.0"
-    },
-    "nginx": {
-      "locked_version": "2.4.4"
-    },
-    "lvm": {
-      "locked_version": "1.0.4"
-    },
-    "java": {
-      "locked_version": "1.21.2"
-    },
-    "ntp": {
-      "locked_version": "1.6.0"
-    },
-    "iptables": {
-      "locked_version": "0.12.0"
-    },
-    "sysctl": {
-      "locked_version": "0.3.5"
-    },
-    "timezone": {
-      "locked_version": "0.0.1"
-    },
-    "postfix": {
-      "locked_version": "3.1.4"
-    },
-    "sphinx": {
-      "locked_version": "1.0.3"
-    },
-    "rvm": {
-      "locked_version": "0.9.1",
-      "git": "git://github.com/fnichol/chef-rvm.git",
-      "ref": "87f58d428c160337c1581ed1130a1a53d94e5126"
-    },
-    "emacs24": {
-      "locked_version": "0.1.0",
-      "git": "git@github.com:Sliim/emacs24-chef-cookbook.git",
-      "ref": "a43b7d338a8d06abd3e52889a0753548d80211f6"
-    },
-    "sudo": {
-      "locked_version": "2.5.2"
-    },
-    "dmg": {
-      "locked_version": "2.2.0"
-    },
-    "build-essential": {
-      "locked_version": "2.0.0"
-    },
-    "windows": {
-      "locked_version": "1.30.0"
-    },
-    "chef_handler": {
-      "locked_version": "1.1.5"
-    },
-    "runit": {
-      "locked_version": "1.5.10"
-    },
-    "yum": {
-      "locked_version": "3.1.4"
-    },
-    "yum-epel": {
-      "locked_version": "0.3.4"
-    },
-    "bluepill": {
-      "locked_version": "2.3.1"
-    },
-    "rsyslog": {
-      "locked_version": "1.12.2"
-    },
-    "ohai": {
-      "locked_version": "1.1.12"
-    },
-    "mysql": {
-      "locked_version": "4.1.2"
-    },
-    "openssl": {
-      "locked_version": "1.1.0"
-    },
-    "homebrew": {
-      "locked_version": "1.5.4"
-    },
-    "percona": {
-      "locked_version": "0.14.5"
-    },
-    "chef_gem": {
-      "locked_version": "0.1.0"
-    }
-  }
-}
+DEPENDENCIES
+  apt
+  base
+    path: tulp_repo/cookbooks/base
+  crontab
+    path: tulp_repo/cookbooks/crontab
+  emacs24
+    git: git@github.com:Sliim/emacs24-chef-cookbook.git
+    revision: a43b7d338a8d06abd3e52889a0753548d80211f6
+  git
+  iptables
+  java
+  locales
+  lvm
+  nginx
+  ntp
+  postfix
+  postgresql
+    path: tulp_repo/cookbooks/postgresql
+  redis
+    path: tulp_repo/cookbooks/redis
+  riemann-client
+    path: vendor/chef-riemann-client
+  riemann-server
+    path: vendor/chef-riemann-server
+  role-riemann-server
+    path: vendor/chef-role-riemann-server
+  rvm
+    git: git://github.com/fnichol/chef-rvm.git
+    revision: dd58087e7399097a9b9df4e2e7235908aace2afd
+  s3backup
+    path: tulp_repo/cookbooks/s3backup
+  sysctl
+  timezone
+  tulp
+    path: tulp_repo/cookbooks/tulp
+  user
+    path: tulp_repo/cookbooks/user
+  zabbix
+    path: tulp_repo/cookbooks/zabbix
+
+GRAPH
+  apt (2.3.8)
+  base (0.1.0)
+    locales (>= 0.0.0)
+    riemann-client (>= 0.0.0)
+  bluepill (2.3.1)
+    rsyslog (>= 0.0.0)
+  build-essential (2.0.0)
+  chef_gem (0.1.0)
+  chef_handler (1.1.6)
+  crontab (0.1.0)
+  dmg (2.2.0)
+  emacs24 (0.1.0)
+    apt (>= 0.0.0)
+  git (4.0.0)
+    build-essential (>= 0.0.0)
+    dmg (>= 0.0.0)
+    runit (>= 1.0.0)
+    windows (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  iptables (0.13.2)
+  java (1.22.0)
+  locales (0.2.2)
+  lvm (1.1.0)
+  nginx (2.6.2)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 1.1)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ntp (1.6.2)
+  ohai (1.1.12)
+  postfix (3.1.8)
+  postgresql (0.1.0)
+  python (1.4.6)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  rbenv (1.7.1)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    git (>= 0.0.0)
+    ohai (>= 1.1)
+  redis (0.1.0)
+  riemann-client (1.1.0)
+    git (>= 0.0.0)
+    rbenv (>= 0.0.0)
+    runit (>= 0.0.0)
+  riemann-server (0.1.0)
+    runit (>= 0.0.0)
+  role-riemann-server (0.1.0)
+    java (>= 0.0.0)
+    riemann-server (>= 0.0.0)
+  rsyslog (1.12.2)
+  runit (1.5.10)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  rvm (0.9.2)
+    chef_gem (>= 0.0.0)
+    java (>= 0.0.0)
+  s3backup (0.0.1)
+    crontab (>= 0.0.0)
+    git (>= 0.0.0)
+    python (>= 0.0.0)
+  sudo (2.5.2)
+  sysctl (0.4.0)
+  timezone (0.0.1)
+  tulp (0.7.0)
+    lvm (>= 0.0.0)
+    nginx (>= 0.0.0)
+    postgresql (>= 0.0.0)
+    redis (>= 0.0.0)
+    rvm (>= 0.0.0)
+    s3backup (>= 0.0.0)
+    sudo (>= 0.0.0)
+  user (0.2.6)
+  windows (1.30.2)
+    chef_handler (>= 0.0.0)
+  yum (3.2.0)
+  yum-epel (0.3.6)
+    yum (~> 3.0)
+  zabbix (0.0.1)

@@ -1,0 +1,32 @@
+{
+    "variables": {
+	"do_image_id": 308287, 
+	"do_region_id": 5,
+	"do_size_id": 65,
+	"do_api_key": "",
+	"do_client_id": ""
+    },
+    "builders": 
+    [
+	{
+	    "type": "digitalocean",
+	    "private_networking": true,
+	    "api_key": "{{user `do_api_key`}}",
+	    "client_id": "{{user `do_client_id`}}",
+	    "image_id": "{{user `do_image_id`}}",
+	    "region_id": "{{user `do_region_id`}}",
+	    "size_id": "{{user `do_size_id`}}",
+	    "snapshot_name": "infrastructure-{{isotime}}",
+	    "private_networking": true
+	}	
+    ],    
+    "provisioners": [
+	{
+	    "type": "chef-client",
+	    "server_url": "188.226.172.225",
+	    "node_name": "db-master-1",
+	    "run_list": ["role[base]", "role[postgresql-master]"]
+	    
+	}
+    ]
+}
