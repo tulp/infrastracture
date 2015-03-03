@@ -17,14 +17,13 @@ DEPENDENCIES
   postfix
   postgresql
     path: tulp_repo/cookbooks/postgresql
+  rbenv
+    git: git://github.com/tulp/rbenv-cookbook.git
+    revision: 7feda0b1379474023fe117821f7194bbc21f0fa4
   redis
     path: tulp_repo/cookbooks/redis
-  riemann-client
-    path: vendor/chef-riemann-client
-  riemann-server
-    path: vendor/chef-riemann-server
-  role-riemann-server
-    path: vendor/chef-role-riemann-server
+  riemann
+    path: chef-riemann
   rvm
     git: git://github.com/fnichol/chef-rvm.git
     revision: dd58087e7399097a9b9df4e2e7235908aace2afd
@@ -34,6 +33,10 @@ DEPENDENCIES
   timezone
   tulp
     path: tulp_repo/cookbooks/tulp
+  tulp-riemann
+    path: chef-tulp-riemann
+  tulp-sales
+    path: tulp-sales
   user
     path: tulp_repo/cookbooks/user
   zabbix
@@ -43,7 +46,8 @@ GRAPH
   apt (2.3.8)
   base (0.1.0)
     locales (>= 0.0.0)
-    riemann-client (>= 0.0.0)
+    rbenv (>= 0.0.0)
+    runit (>= 0.0.0)
   bluepill (2.3.1)
     rsyslog (>= 0.0.0)
   build-essential (2.0.0)
@@ -78,21 +82,14 @@ GRAPH
   python (1.4.6)
     build-essential (>= 0.0.0)
     yum-epel (>= 0.0.0)
-  rbenv (1.7.1)
+  rbenv (1.7.2)
     apt (>= 0.0.0)
     build-essential (>= 0.0.0)
     git (>= 0.0.0)
-    ohai (>= 1.1)
+    ohai (>= 1.1.0)
   redis (0.1.0)
-  riemann-client (1.1.0)
-    git (>= 0.0.0)
-    rbenv (>= 0.0.0)
+  riemann (0.2.0)
     runit (>= 0.0.0)
-  riemann-server (0.1.0)
-    runit (>= 0.0.0)
-  role-riemann-server (0.1.0)
-    java (>= 0.0.0)
-    riemann-server (>= 0.0.0)
   rsyslog (1.12.2)
   runit (1.5.10)
     build-essential (>= 0.0.0)
@@ -108,13 +105,22 @@ GRAPH
   sudo (2.5.2)
   sysctl (0.4.0)
   timezone (0.0.1)
-  tulp (0.7.0)
+  tulp (0.7.1)
     lvm (>= 0.0.0)
     nginx (>= 0.0.0)
     postgresql (>= 0.0.0)
     redis (>= 0.0.0)
     rvm (>= 0.0.0)
     s3backup (>= 0.0.0)
+    sudo (>= 0.0.0)
+  tulp-riemann (0.2.0)
+    nginx (>= 0.0.0)
+    riemann (>= 0.0.0)
+    runit (>= 0.0.0)
+  tulp-sales (0.1.0)
+    nginx (>= 0.0.0)
+    postgresql (>= 0.0.0)
+    rvm (>= 0.0.0)
     sudo (>= 0.0.0)
   user (0.2.6)
   windows (1.30.2)
